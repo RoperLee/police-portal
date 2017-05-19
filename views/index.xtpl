@@ -1,0 +1,11 @@
+{{extend('./layout')}}
+{{#block('content')}}
+<div class="body-implement">
+    <h1>{{title}}</h1>
+    <p>Welcome to {{title}}</p>
+</div>
+{{/block}}
+
+{{#block('link')}}
+<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+{{/block}}

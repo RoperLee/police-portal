@@ -1,0 +1,17 @@
+{
+  "title": "midway interface configuration",
+  "version": "1.0.0",
+  "status": "online",
+  "interfaces": [
+    {
+      "name": "健康检查",
+      "id": "Health.check.for.project",
+      "method": "get",
+      "dataType": "json",
+      "urls": {
+        "online": "http://127.0.0.1:9090/getUserById"
+      },
+      "timeout": 30000
+    }
+  ]
+}

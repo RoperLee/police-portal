@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>松鼠盒子</title>
+    {{{block('link')}}}
+</head>
+<body>
+{{{block('content')}}}
+</body>
+</html>
