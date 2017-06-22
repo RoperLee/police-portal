@@ -29,6 +29,10 @@
 </div>
 {{/block}}
 
-{{#block('link')}}
+{{#block('styleLink')}}
 <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+{{/block}}
+
+{{#block('scriptLink')}}
+<script src=""></script>
 {{/block}}
