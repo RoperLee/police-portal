@@ -1,0 +1,50 @@
+body {
+    background-color: #ffffff;
+}
+
+.body-implement {
+    margin: 40px;
+    font-size: 12px;
+}
+
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 17px;
+    margin-bottom: 0px;
+    padding-left: 27px !important;
+    padding-right: 27px !important;
+    background-color: #0796c1;
+}
+
+.left-panel {
+    background-color: rgb(7, 150, 193);
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 6px !important;
+    border-top-left-radius: 0px !important;
+    border-right: 2px solid #ffffff;
+    padding-top: 0px;
+}
+
+.right-panel {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 6px !important;
+    border-top-right-radius: 0px !important;
+    background-color: #0796c1;
+    padding-top: 0px;
+}
+
+.form-group {
+    font-size: 13px;
+}
+
+.whole-title {
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom: 2px solid #ffffff;
+}
+
+.row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+

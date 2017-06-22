@@ -1,0 +1,38 @@
+{{extend('./layout')}}
+{{#block('content')}}
+<div class="body-implement">
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron col-sm-12 whole-title">
+                <h2>计算机二级题目录入后门</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 jumbotron left-panel">
+                <h3>1、题目类别</h3>
+                <div class="form-group">
+                    <label class="subject-label">所属科目</label>
+                    <select class="form-control subject-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-8 jumbotron right-panel">
+                <h3>2、题目内容</h3>
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}
+
+{{#block('styleLink')}}
+<link rel="stylesheet" type="text/css" href="/css/question.css"/>
+{{/block}}
+
+{{#block('scriptLink')}}
+<script src=""></script>
+{{/block}}
