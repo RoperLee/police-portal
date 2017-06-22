@@ -8,12 +8,23 @@ exports.addQuestion = function (req, res, next) {
         getAllSubject: 'get.all.subject'
     });
     dataProxy.getAllSubject({}).done(function (result) {
-        if (result.successful && result.object && result.object.length) {
-            res.render('question_page', {subjectList: result.object});
-        } else {
-            res.render('question_page', {});
-        }
+        res.render('question_page', {subjectList: result.object});
     }).error(function (err) {
         res.render('question_page', {});
     });
 };
+
+exports.getDirectoryListBySubjectId = function (req, res, next) {
+    let subjectId = req.query.subjectId;
+    let dataProxy = new ModelProxy({
+        getDirectoryListBySubjectId: 'get.directory.list.by.subjectId'
+    });
+    dataProxy.getDirectoryListBySubjectId({
+        subjectId: subjectId
+    }).done(function (result) {
+        res.json(result);
+    }).error(function (err) {
+        res.json({result});
+    });
+};
+

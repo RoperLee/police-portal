@@ -23,7 +23,6 @@
 
                 </div>
 
-
             </div>
             <div class="col-sm-8 jumbotron right-panel">
                 <h3>2、题目内容</h3>
@@ -37,7 +36,13 @@
 <script type="text/x-template" id="J_subject_select_tmp">
     <label class="subject-label"> ② 选择章节</label>
     <select class="form-control subject-select">
-        <option value="{{id}}">{{fullName}}</option>
+        {{#each(resultList)}}
+        <optgroup label="{{type}}">
+            {{#each(directoryList)}}
+            <option value="{{id}}">{{title}}</option>
+            {{/each}}
+        </optgroup>
+        {{/each}}
     </select>
 </script>
 %}}
