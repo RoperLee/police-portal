@@ -39,7 +39,7 @@
         {{#each(resultList)}}
         <optgroup label="{{type}}">
             {{#each(directoryList)}}
-            <option value="{{id}}">{{title}}</option>
+            <option value="{{id}}">{{sampleTitle(title)}}</option>
             {{/each}}
         </optgroup>
         {{/each}}
