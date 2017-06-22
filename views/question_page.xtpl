@@ -33,12 +33,14 @@
 </div>
 
 <!--章节选择模板-->
-<script type="text/html" id="J_subject_select_tmp">
+{{%
+<script type="text/x-template" id="J_subject_select_tmp">
     <label class="subject-label"> ② 选择章节</label>
     <select class="form-control subject-select">
         <option value="{{id}}">{{fullName}}</option>
     </select>
 </script>
+%}}
 {{/block}}
 
 {{#block('styleLink')}}
@@ -48,9 +50,6 @@
 {{#block('scriptLink')}}
 <script src="/question.js"></script>
 {{/block}}
-
-
-
 
 
 

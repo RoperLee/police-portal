@@ -11,9 +11,9 @@ exports.addQuestion = function (req, res, next) {
         if (result.successful && result.object && result.object.length) {
             res.render('question_page', {subjectList: result.object});
         } else {
-            res.render('error', {});
+            res.render('question_page', {});
         }
     }).error(function (err) {
-        res.render('error', {});
+        res.render('question_page', {});
     });
 };
