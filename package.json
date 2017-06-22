@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build": "browserify public/js/question.js -o public/js/build/question.js && npm start"
+    "build": "browserify public/js/*.js -o build/*.js && npm start"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
