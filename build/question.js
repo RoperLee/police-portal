@@ -12746,6 +12746,7 @@ $(document).ready(function () {
         let temp = title.replace(/计算机二级考试/g, '');
         return temp.replace(/未来教育机考/g, '');
     });
+    bindEvent();
 
     function getDirectoryListBySubjectId(subjectId) {
         $.ajax({
@@ -12763,5 +12764,56 @@ $(document).ready(function () {
             }
         })
     }
+
+    function bindEvent() {
+        //科目select变化
+        $('.subject-select').change(function () {
+            let subjectId = $(this).children('option:selected').val();
+            getDirectoryListBySubjectId(subjectId);
+        });
+    }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 },{"jquery":2,"xtemplate":7}]},{},[13,14]);
