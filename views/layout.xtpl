@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/bootstrap-3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/amelia.bootstrap.min.css">
+    <link href="/select2/css/select2.min.css" rel="stylesheet" />
     {{{block('styleLink')}}}
 </head>
 <body>
 {{{block('content')}}}
 <script src="/js/jquery-3.2.1.min.js"></script>
 <script src="/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="/select2/js/select2.full.js"></script>
 {{{block('scriptLink')}}}
 </body>
 </html>

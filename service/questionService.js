@@ -4,5 +4,16 @@
 var ModelProxy = require('../lib/modelproxy');
 
 exports.addQuestion = function (req, res, next) {
-    res.render('question_page', {});
+    var dataProxy = new ModelProxy({
+        getAllSubject: 'get.all.subject'
+    });
+    dataProxy.getAllSubject({}).done(function (result) {
+        if (result.successful && result.object && result.object.length) {
+            res.render('question_page', {subjectList: result.object});
+        } else {
+            res.render('error', {});
+        }
+    }).error(function (err) {
+        res.render('error', {});
+    });
 };

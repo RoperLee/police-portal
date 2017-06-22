@@ -1,6 +1,6 @@
 {{extend('./layout')}}
 {{#block('content')}}
 <div class="body-implement">
-    <h1>错误页面</h1>
+    <h1>出错了</h1>
 </div>
 {{/block}}
