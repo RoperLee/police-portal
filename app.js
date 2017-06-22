@@ -1,3 +1,6 @@
+var xtpl = require('xtpl');
+xtpl.__express = xtpl.renderFile;
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
