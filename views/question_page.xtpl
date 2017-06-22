@@ -46,7 +46,7 @@
 {{/block}}
 
 {{#block('scriptLink')}}
-<script src="/js/question.js"></script>
+<script src="/js/build/question.js"></script>
 {{/block}}
 
 
