@@ -65,7 +65,7 @@
                     <div class="form-group">
                         <textarea class="question-content-text" cols="52" placeholder="请输入题目文本内容"></textarea>
                         <div class="up-file-container hidden">
-                            <input id="input-2" name="input2[]" type="file" class="file" multiple
+                            <input id="input-1" name="input1[]" type="file" class="file" multiple
                                    data-show-upload="false" data-show-caption="true">
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                         <input type="radio" name="is-img-select" value='Y'> 是
                     </div>
                 </div>
-                <div class="row">
+                <div class="row select-text-panel">
                     <div class="form-group select-option-container">
                         <div class="input-group input-group-lg select-item">
                             <span class="input-group-addon"> A </span>
@@ -95,6 +95,10 @@
                             </button>
                         </div>
                     </div>
+                </div>
+                <div class="row select-image-panel hidden">
+                    <input id="input-2" name="input2[]" type="file" class="file" multiple
+                           data-show-upload="false" data-show-caption="true">
                 </div>
 
 

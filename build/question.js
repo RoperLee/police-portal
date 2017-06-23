@@ -12778,7 +12778,6 @@ $(document).ready(function () {
                 $('.select-option-container').find('.input-group').last().remove();
             }
         });
-
         //增加选项
         $('.add-select').on('click', function () {
             let currentItemVal = $('.select-option-container').find('input').last().data('value');
@@ -12786,8 +12785,6 @@ $(document).ready(function () {
                 $('.select-option-container').append(selectOptionTemplate.render({item: selectItemData[currentItemVal]}));
             }
         });
-
-
         //科目select变化
         $('.subject-select').change(function () {
             let subjectId = $(this).children('option:selected').val();
@@ -12835,6 +12832,18 @@ $(document).ready(function () {
                 $('.up-file-container').removeClass('hidden');
             }
         });
+        //选项否是图片
+        $('input[name="is-img-select"]').change(function () {
+            var $selectedvalue = $('input[name="is-img-select"]:checked').val();
+            if ($selectedvalue == 'N') {
+                $('.select-text-panel').removeClass('hidden');
+                $('.select-image-panel').addClass('hidden');
+            } else {
+                $('.select-text-panel').addClass('hidden');
+                $('.select-image-panel').removeClass('hidden');
+            }
+        });
+
 
     }
 });
