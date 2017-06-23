@@ -12773,11 +12773,19 @@ $(document).ready(function () {
         });
         //题号加1
         $('.add-number-btn').on('click', function (e) {
-            $('.sort-key-number').val(parseInt($('.sort-key-number').val()) + 1);
+            let origin = $('.sort-key-number').val().replace(/\s/g, "");
+            if (origin.length == 0) {
+                origin = '0';
+            }
+            $('.sort-key-number').val(parseInt(origin) + 1);
         });
         //题号减1
         $('.min-number-btn').on('click', function (e) {
-            $('.sort-key-number').val(parseInt($('.sort-key-number').val()) - 1);
+            let origin = $('.sort-key-number').val().replace(/\s/g, "");
+            if (origin.length == 0) {
+                origin = '1';
+            }
+            $('.sort-key-number').val(parseInt(origin) - 1);
         });
         //支持Tab缩进
         $(".question-content-text").on('keydown', function (e) {
