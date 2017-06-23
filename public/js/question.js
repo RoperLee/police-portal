@@ -46,6 +46,21 @@ $(document).ready(function () {
         $('.min-number-btn').on('click', function (e) {
             $('.sort-key-number').val(parseInt($('.sort-key-number').val()) - 1);
         });
+        //支持Tab缩进
+        $(".question-content-text").on('keydown', function (e) {
+            if (e.keyCode == 9) {
+                e.preventDefault();
+                let indent = '    ';
+                let start = this.selectionStart;
+                let end = this.selectionEnd;
+                let selected = window.getSelection().toString();
+                selected = indent + selected.replace(/\n/g, '\n' + indent);
+                this.value = this.value.substring(0, start) + selected
+                    + this.value.substring(end);
+                this.setSelectionRange(start + indent.length, start
+                    + selected.length);
+            }
+        })
     }
 });
 
