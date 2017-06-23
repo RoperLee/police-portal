@@ -39,15 +39,17 @@ $(document).ready(function () {
     function bindEvent() {
         //减少选项
         $('.min-select').on('click', function () {
-            if ($('.select-option-container').length) {
-                $('.select-option-container').last().remove();
+            if ($('.select-option-container').find('.input-group').length > 1) {
+                $('.select-option-container').find('.input-group').last().remove();
             }
         });
 
         //增加选项
         $('.add-select').on('click', function () {
             let currentItemVal = $('.select-option-container').find('input').last().data('value');
-            $('.select-option-container').append(selectOptionTemplate.render({item: selectItemData[currentItemVal]}));
+            if (selectItemData[currentItemVal]) {
+                $('.select-option-container').append(selectOptionTemplate.render({item: selectItemData[currentItemVal]}));
+            }
         });
 
 
