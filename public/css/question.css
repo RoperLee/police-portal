@@ -90,7 +90,7 @@ input[type="radio"] {
 
 .file-preview {
     border-radius: 5px;
-    border: 1px solid #26adcc !important;
+    border: 1px solid rgba(38, 173, 204, 0) !important;
     padding: 5px;
     width: 100%;
     margin-bottom: 5px;
@@ -117,11 +117,6 @@ input[type="radio"] {
     margin-top: -80px !important;
 }
 
-.krajee-default .file-upload-indicator {
-    background-color: #26adcc !important;
-    border-color: #26adcc !important;
-}
-
 .glyphicon-hand-down:before {
     font-size: 0px !important;
 }
@@ -138,7 +133,10 @@ input[type="radio"] {
     margin-bottom: 3px;
 }
 
-
+.krajee-default .file-upload-indicator {
+    background-color: rgba(38, 173, 204, 0) !important;
+    border-color: rgba(38, 173, 204, 0) !important;
+}
 
 
 
