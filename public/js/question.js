@@ -85,7 +85,7 @@ $(document).ready(function () {
             $('.sort-key-number').val(parseInt(origin) - 1);
         });
         //支持Tab缩进
-        $(".question-content-text").on('keydown', function (e) {
+        $(".question-content-text,.answer-content-text").on('keydown', function (e) {
             if (e.keyCode == 9) {
                 e.preventDefault();
                 let indent = '    ';

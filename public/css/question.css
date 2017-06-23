@@ -14,11 +14,11 @@ body {
     margin-bottom: 0px;
     padding-left: 27px !important;
     padding-right: 27px !important;
-    background-color: #414141;
+    background-color: #323232;
 }
 
 .left-panel {
-    background-color: #414141;
+    background-color: #323232;
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 6px !important;
     border-top-left-radius: 0px !important;
@@ -30,7 +30,7 @@ body {
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 6px !important;
     border-top-right-radius: 0px !important;
-    background-color: #414141;
+    background-color: #323232;
     padding-top: 0px;
 }
 
@@ -65,7 +65,7 @@ input[type="radio"] {
     margin-left: 20px;
 }
 
-.question-content-text {
+.question-content-text, .answer-content-text {
     border-radius: 5px;
     resize: vertical;
     color: #000000;
