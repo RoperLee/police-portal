@@ -14,11 +14,11 @@ body {
     margin-bottom: 0px;
     padding-left: 27px !important;
     padding-right: 27px !important;
-    background-color: #26adcc;
+    background-color: #337ab7;
 }
 
 .left-panel {
-    background-color: #26adcc;
+    background-color: #337ab7;
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 6px !important;
     border-top-left-radius: 0px !important;
@@ -30,7 +30,7 @@ body {
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 6px !important;
     border-top-right-radius: 0px !important;
-    background-color: #26adcc;
+    background-color: #337ab7;
     padding-top: 0px;
 }
 
