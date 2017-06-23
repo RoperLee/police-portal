@@ -100,7 +100,14 @@
                     <input id="input-2" name="input2[]" type="file" class="file" multiple
                            data-show-upload="false" data-show-caption="true">
                 </div>
-
+                <div class="row correct-line">
+                    <div class="form-group">
+                        <label> ④ 正确选项</label>
+                        <select class="form-control correct-select">
+                            <option value="A">A</option>
+                        </select>
+                    </div>
+                </div>
 
             </div>
         </div>

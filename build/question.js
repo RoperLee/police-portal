@@ -12776,6 +12776,7 @@ $(document).ready(function () {
         $('.min-select').on('click', function () {
             if ($('.select-option-container').find('.input-group').length > 1) {
                 $('.select-option-container').find('.input-group').last().remove();
+                $('.correct-select').find('option').last().remove();
             }
         });
         //增加选项
@@ -12783,6 +12784,7 @@ $(document).ready(function () {
             let currentItemVal = $('.select-option-container').find('input').last().data('value');
             if (selectItemData[currentItemVal]) {
                 $('.select-option-container').append(selectOptionTemplate.render({item: selectItemData[currentItemVal]}));
+                $('.correct-select').append('<option value="' + selectItemData[currentItemVal] + '"' + '>' + selectItemData[currentItemVal] + '</option>');
             }
         });
         //科目select变化

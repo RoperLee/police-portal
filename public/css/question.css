@@ -138,8 +138,14 @@ input[type="radio"] {
     border-color: rgba(38, 173, 204, 0) !important;
 }
 
+.row.correct-line {
+    margin-top: 12px;
+}
 
-
+select.correct-select {
+    width: 77px;
+    height: 41px;
+}
 
 
 
