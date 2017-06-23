@@ -13,11 +13,11 @@ body {
     margin-bottom: 0px;
     padding-left: 27px !important;
     padding-right: 27px !important;
-    background-color: #0796c1;
+    background-color: #000000;
 }
 
 .left-panel {
-    background-color: rgb(7, 150, 193);
+    background-color: #000000;
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 6px !important;
     border-top-left-radius: 0px !important;
@@ -29,7 +29,7 @@ body {
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 6px !important;
     border-top-right-radius: 0px !important;
-    background-color: #0796c1;
+    background-color: #000000;
     padding-top: 0px;
 }
 
@@ -46,5 +46,15 @@ body {
 .row {
     margin-right: 0px !important;
     margin-left: 0px !important;
+    font-size: 13px;
 }
+
+span.add-number {
+    font-size: 12px;
+}
+
+input[type="radio"] {
+    margin-left: 15px;
+}
+
 

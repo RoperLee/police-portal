@@ -35,6 +35,27 @@
             </div>
             <div class="col-sm-8 jumbotron right-panel">
                 <h3>2、题目内容</h3>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="sort-key-number"> ① 题号</label>
+                        <div class="input-group col-sm-3">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-plus add-number" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="请输入题号">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="question-content"> ② 题面</label>
+                    <div class="form-group">
+                        <label class="is-img-content"> 是否图片</label>
+                        <input type="radio" name="is-img-content" value='N' checked="checked"> 否
+                        <input type="radio" name="is-img-content" value='Y'> 是
+                    </div>
+                </div>
             </div>
         </div>
     </div>
