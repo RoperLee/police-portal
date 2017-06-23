@@ -147,6 +147,9 @@ select.correct-select {
     height: 41px;
 }
 
+select.correct-select {
+    font-size: 18px;
+}
 
 
 
