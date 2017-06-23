@@ -68,7 +68,19 @@ $(document).ready(function () {
                 this.setSelectionRange(start + indent.length, start
                     + selected.length);
             }
-        })
+        });
+        //题目是否是图片
+        $('input[name="is-img-content"]').change(function () {
+            var $selectedvalue = $('input[name="is-img-content"]:checked').val();
+            if ($selectedvalue == 'N') {
+                $('.question-content-text').removeClass('hidden');
+                $('.up-file-container').addClass('hidden');
+            } else {
+                $('.question-content-text').addClass('hidden');
+                $('.up-file-container').removeClass('hidden');
+            }
+        });
+
     }
 });
 

@@ -62,8 +62,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <!--<textarea class="question-content-text" cols="52" placeholder="请输入题目文本内容"></textarea>-->
-                    <input id="input-2" name="input2[]" type="file" class="file" multiple data-show-upload="false" data-show-caption="true">
+                    <textarea class="question-content-text" cols="52" placeholder="请输入题目文本内容"></textarea>
+                    <div class="up-file-container hidden">
+                        <input id="input-2" name="input2[]" type="file" class="file" multiple data-show-upload="false"
+                               data-show-caption="true">
+                    </div>
                 </div>
             </div>
         </div>
