@@ -1,6 +1,6 @@
 body {
     background-color: #ffffff;
-    color: #000000;
+    color: #ffffff;
 }
 
 .body-implement {
@@ -14,11 +14,11 @@ body {
     margin-bottom: 0px;
     padding-left: 27px !important;
     padding-right: 27px !important;
-    background-color: #337ab7;
+    background-color: #414141;
 }
 
 .left-panel {
-    background-color: #337ab7;
+    background-color: #414141;
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 6px !important;
     border-top-left-radius: 0px !important;
@@ -30,7 +30,7 @@ body {
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 6px !important;
     border-top-right-radius: 0px !important;
-    background-color: #337ab7;
+    background-color: #414141;
     padding-top: 0px;
 }
 
@@ -85,7 +85,7 @@ input[type="radio"] {
 }
 
 .form-control {
-    color: #000;
+    color: #000000;
 }
 
 .file-preview {
