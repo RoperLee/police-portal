@@ -1,5 +1,6 @@
 body {
     background-color: #ffffff;
+    color: #ffffff;
 }
 
 .body-implement {
@@ -38,7 +39,7 @@ body {
     font-weight: bold;
 }
 
-.question-content-label{
+.question-content-label {
     font-size: 14px;
     font-weight: bold;
 }
@@ -81,6 +82,54 @@ input[type="radio"] {
 .sort-key-number {
     font-size: 20px;
     text-align: center;
-    border: #ffffff;
 }
 
+.form-control {
+    color: #000;
+}
+
+.file-preview {
+    border-radius: 5px;
+    border: 1px solid #26adcc !important;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: -27px;
+}
+
+.krajee-default.file-preview-frame {
+    position: relative;
+    display: table;
+    margin: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0;
+    padding: 6px;
+    float: left;
+    text-align: center;
+}
+
+.krajee-default.file-preview-frame {
+    border: 0px solid #ddd !important;
+    box-shadow: 0px 0px 0px 0 #a2958a !important;
+}
+
+.krajee-default .file-actions {
+    margin-top: -80px !important;
+}
+
+.krajee-default .file-upload-indicator {
+    background-color: #26adcc !important;
+    border-color: #26adcc !important;
+}
+
+.glyphicon-hand-down:before {
+    font-size: 0px !important;
+}
+
+.close {
+    font-size: 0px !important;
+}
+
+.krajee-default.file-preview-frame .file-thumbnail-footer {
+    height: 30px !important;
+}
