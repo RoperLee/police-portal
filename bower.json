@@ -1,0 +1,18 @@
+{
+  "name": "computer-portal",
+  "description": "",
+  "main": "",
+  "authors": [
+    "RoperLee <pengleemanager@163.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/RoperLee/police-portal",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
