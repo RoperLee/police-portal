@@ -39,7 +39,7 @@ body {
     font-weight: bold;
 }
 
-.question-content-label {
+.question-label {
     font-size: 14px;
     font-weight: bold;
 }
@@ -56,7 +56,7 @@ body {
     font-size: 13px;
 }
 
-span.add-number, .min-number {
+span.add-icon, .min-icon {
     font-size: 12px;
     color: #000000;
 }
@@ -133,3 +133,37 @@ input[type="radio"] {
 .krajee-default.file-preview-frame .file-thumbnail-footer {
     height: 30px !important;
 }
+
+.input-group.select-item {
+    margin-bottom: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -12739,16 +12739,20 @@ arguments[4][13][0].apply(exports,arguments)
 let $ = require("jquery");
 let XTemplate = require('xtemplate');
 let subjectSelectTemplate = new XTemplate($('#J_subject_select_tmp').html());
+let selectOptionTemplate = new XTemplate($('#J_select_option_tmp').html());
+let selectItemData = {
+    A: 'B', B: 'C', C: 'D', D: 'E', E: 'F', F: 'G', G: 'H', H: 'I', I: 'J', J: 'K'
+};
 
 $(document).ready(function () {
 
     getDirectoryListBySubjectId(1); //首次显示C语言
+    bindEvent();//绑定事件
     subjectSelectTemplate.addCommand('sampleTitle', function (scope, option) {
         let title = option.params[0];
         let temp = title.replace(/计算机二级考试/g, '');
         return temp.replace(/未来教育机考/g, '');
     });
-    bindEvent();
 
     function getDirectoryListBySubjectId(subjectId) {
         $.ajax({
@@ -12768,6 +12772,18 @@ $(document).ready(function () {
     }
 
     function bindEvent() {
+        //减少选项
+        $('.min-select').on('click', function () {
+
+        });
+
+        //增加选项
+        $('.add-select').on('click', function () {
+            let currentItemVal = $('.select-option-container').find('input').last().data('value');
+            $('.select-option-container').html(selectOptionTemplate.render({item: selectItemData[currentItemVal]}));
+        });
+
+
         //科目select变化
         $('.subject-select').change(function () {
             let subjectId = $(this).children('option:selected').val();

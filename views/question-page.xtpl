@@ -41,20 +41,20 @@
                         <div class="input-group col-sm-3">
                             <span class="input-group-btn">
                                 <button class="btn btn-default add-number-btn" type="button">
-                                    <span class="glyphicon glyphicon-plus add-number" aria-hidden="true"></span>
+                                    <span class="glyphicon glyphicon-plus add-icon" aria-hidden="true"></span>
                                 </button>
                             </span>
                             <input type="text" class="form-control sort-key-number" placeholder="" value="1">
                             <span class="input-group-btn">
                                 <button class="btn btn-default min-number-btn" type="button">
-                                    <span class="glyphicon glyphicon-minus min-number" aria-hidden="true"></span>
+                                    <span class="glyphicon glyphicon-minus min-icon" aria-hidden="true"></span>
                                 </button>
                             </span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <label class="question-content-label"> ② 题面</label>
+                    <label class="question-label"> ② 题面</label>
                     <div class="form-group">
                         <label class="is-img-content"> 是否图片</label>
                         <input type="radio" name="is-img-content" value='N' checked="checked"> 否
@@ -62,16 +62,56 @@
                     </div>
                 </div>
                 <div class="row">
-                    <textarea class="question-content-text" cols="52" placeholder="请输入题目文本内容"></textarea>
-                    <div class="up-file-container hidden">
-                        <input id="input-2" name="input2[]" type="file" class="file" multiple data-show-upload="false"
-                               data-show-caption="true">
+                    <div class="form-group">
+                        <textarea class="question-content-text" cols="52" placeholder="请输入题目文本内容"></textarea>
+                        <div class="up-file-container hidden">
+                            <input id="input-2" name="input2[]" type="file" class="file" multiple
+                                   data-show-upload="false" data-show-caption="true">
+                        </div>
                     </div>
                 </div>
+                <div class="row">
+                    <label class="question-label"> ③ 选项</label>
+                    <div class="form-group">
+                        <label class="is-img-select"> 是否图片</label>
+                        <input type="radio" name="is-img-select" value='N' checked="checked"> 否
+                        <input type="radio" name="is-img-select" value='Y'> 是
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group select-option-container">
+                        <div class="input-group input-group-lg select-item">
+                            <span class="input-group-addon"> A </span>
+                            <input type="text" class="form-control select-content" data-value="A">
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-default add-select select-operate" type="button">
+                                <span class="glyphicon glyphicon-plus select-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="btn btn-default min-select select-operate" type="button">
+                                <span class="glyphicon glyphicon-minus select-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
 </div>
+
+<!--选项模板-->
+{{%
+<script type="text/x-template" id="J_select_option_tmp">
+    <div class="input-group input-group-lg select-item">
+        <span class="input-group-addon"> {{item}} </span>
+        <input type="text" class="form-control select-content" data-value="{{item}}">
+    </div>
+</script>
+%}}
 
 <!--章节选择模板-->
 {{%
