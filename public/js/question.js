@@ -99,6 +99,17 @@ $(document).ready(function () {
                     + selected.length);
             }
         });
+        //解析是否是图片
+        $('input[name="is-img-answer"]').change(function () {
+            var $selectedvalue = $('input[name="is-img-answer"]:checked').val();
+            if ($selectedvalue == 'N') {
+                $('.answer-content-text').removeClass('hidden');
+                $('.up-answer-file-container').addClass('hidden');
+            } else {
+                $('.answer-content-text').addClass('hidden');
+                $('.up-answer-file-container').removeClass('hidden');
+            }
+        });
         //题目是否是图片
         $('input[name="is-img-content"]').change(function () {
             var $selectedvalue = $('input[name="is-img-content"]:checked').val();
