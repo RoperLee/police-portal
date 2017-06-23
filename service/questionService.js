@@ -8,9 +8,9 @@ exports.addQuestion = function (req, res, next) {
         getAllSubject: 'get.all.subject'
     });
     dataProxy.getAllSubject({}).done(function (result) {
-        res.render('question_page', {subjectList: result.object});
+        res.render('question-page', {subjectList: result.object});
     }).error(function (err) {
-        res.render('question_page', {});
+        res.render('question-page', {});
     });
 };
 
