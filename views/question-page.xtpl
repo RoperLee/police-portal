@@ -45,6 +45,11 @@
                                 </button>
                             </span>
                             <input type="text" class="form-control sort-key-number" placeholder="" value="1">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default min-number-btn" type="button">
+                                    <span class="glyphicon glyphicon-minus min-number" aria-hidden="true"></span>
+                                </button>
+                            </span>
                         </div>
                     </div>
                 </div>

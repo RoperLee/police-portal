@@ -12775,6 +12775,10 @@ $(document).ready(function () {
         $('.add-number-btn').on('click', function (e) {
             $('.sort-key-number').val(parseInt($('.sort-key-number').val()) + 1);
         });
+        //题号减1
+        $('.min-number-btn').on('click', function (e) {
+            $('.sort-key-number').val(parseInt($('.sort-key-number').val()) - 1);
+        });
     }
 });
 
