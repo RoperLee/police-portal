@@ -88,10 +88,13 @@
 
 {{#block('styleLink')}}
 <link rel="stylesheet" type="text/css" href="/css/question.css"/>
+<link rel="stylesheet" type="text/css" href="/bootstrap-fileinput/css/fileinput.min.css"/>
 {{/block}}
+
 
 {{#block('scriptLink')}}
 <script src="/question.js"></script>
+<script type="text/javascript" src="/bootstrap-fileinput/js/fileinput.js"></script>
 {{/block}}
 
 
