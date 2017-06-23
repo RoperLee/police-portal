@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <label class="question-content-label"> ② 题面</label>
+                    <label class="form-group question-content-label"> ② 题面</label>
                     <div class="form-group">
                         <label class="is-img-content"> 是否图片</label>
                         <input type="radio" name="is-img-content" value='N' checked="checked"> 否
@@ -57,9 +57,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <textarea class="question-content-text col-sm-12">
-
-                    </textarea>
+                    <textarea class="question-content-text col-sm-12" placeholder="请输入题目文本内容"></textarea>
                 </div>
             </div>
         </div>
