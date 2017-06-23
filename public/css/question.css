@@ -38,6 +38,11 @@ body {
     font-weight: bold;
 }
 
+.question-content-label{
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .whole-title {
     border-bottom-right-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
