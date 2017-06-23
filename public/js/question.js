@@ -38,6 +38,10 @@ $(document).ready(function () {
             let subjectId = $(this).children('option:selected').val();
             getDirectoryListBySubjectId(subjectId);
         });
+        //题号加1
+        $('.add-number-btn').on('click', function (e) {
+            $('.sort-key-number').val(parseInt($('.sort-key-number').val()) + 1);
+        });
     }
 });
 

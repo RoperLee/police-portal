@@ -37,14 +37,14 @@
                 <h3>2、题目内容</h3>
                 <div class="row">
                     <div class="form-group">
-                        <label > ① 题号</label>
+                        <label> ① 题号</label>
                         <div class="input-group col-sm-3">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
+                                <button class="btn btn-default add-number-btn" type="button">
                                     <span class="glyphicon glyphicon-plus add-number" aria-hidden="true"></span>
                                 </button>
                             </span>
-                            <input type="text" class="form-control sort-key-number" placeholder="">
+                            <input type="text" class="form-control sort-key-number" placeholder="" value="1">
                         </div>
                     </div>
                 </div>
