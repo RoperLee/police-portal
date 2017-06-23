@@ -37,6 +37,17 @@ $(document).ready(function () {
     }
 
     function bindEvent() {
+
+        //题目类型select变化 —— 选择、填空、操作题
+        $('.issue-type-select').change(function () {
+            let issuetype = $(this).children('option:selected').val();
+            if (issuetype === 'CHOICE') {
+                $('.choice-info-panel').removeClass('hidden');
+            } else {
+                $('.choice-info-panel').addClass('hidden');
+            }
+        });
+
         //减少选项
         $('.min-select').on('click', function () {
             if ($('.select-option-container').find('.input-group').length > 1) {

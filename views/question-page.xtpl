@@ -70,42 +70,44 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <label class="question-label"> ③ 选项</label>
-                    <div class="form-group">
-                        <label class="is-img-select"> 是否图片</label>
-                        <input type="radio" name="is-img-select" value='N' checked="checked"> 否
-                        <input type="radio" name="is-img-select" value='Y'> 是
-                    </div>
-                </div>
-                <div class="row select-text-panel">
-                    <div class="form-group select-option-container">
-                        <div class="input-group input-group-lg select-item">
-                            <span class="input-group-addon"> A </span>
-                            <input type="text" class="form-control select-content" data-value="A">
+                <div class="choice-info-panel">
+                    <div class="row">
+                        <label class="question-label"> ③ 选项</label>
+                        <div class="form-group">
+                            <label class="is-img-select"> 是否图片</label>
+                            <input type="radio" name="is-img-select" value='N' checked="checked"> 否
+                            <input type="radio" name="is-img-select" value='Y'> 是
                         </div>
                     </div>
-                    <div class="">
-                        <div class="btn-group" role="group">
-                            <button class="btn btn-default add-select select-operate" type="button">
-                                <span class="glyphicon glyphicon-plus select-icon" aria-hidden="true"></span>
-                            </button>
-                            <button class="btn btn-default min-select select-operate" type="button">
-                                <span class="glyphicon glyphicon-minus select-icon" aria-hidden="true"></span>
-                            </button>
+                    <div class="row select-text-panel">
+                        <div class="form-group select-option-container">
+                            <div class="input-group input-group-lg select-item">
+                                <span class="input-group-addon"> A </span>
+                                <input type="text" class="form-control select-content" data-value="A">
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-default add-select select-operate" type="button">
+                                    <span class="glyphicon glyphicon-plus select-icon" aria-hidden="true"></span>
+                                </button>
+                                <button class="btn btn-default min-select select-operate" type="button">
+                                    <span class="glyphicon glyphicon-minus select-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row select-image-panel hidden">
-                    <input id="input-2" name="input2[]" type="file" class="file" multiple
-                           data-show-upload="false" data-show-caption="true">
-                </div>
-                <div class="row correct-line">
-                    <div class="form-group">
-                        <label> ④ 正确选项</label>
-                        <select class="form-control correct-select">
-                            <option value="A">A</option>
-                        </select>
+                    <div class="row select-image-panel hidden">
+                        <input id="input-2" name="input2[]" type="file" class="file" multiple
+                               data-show-upload="false" data-show-caption="true">
+                    </div>
+                    <div class="row correct-line">
+                        <div class="form-group">
+                            <label> ④ 正确选项</label>
+                            <select class="form-control correct-select">
+                                <option value="A">A</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
