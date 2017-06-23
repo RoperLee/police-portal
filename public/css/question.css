@@ -13,11 +13,11 @@ body {
     margin-bottom: 0px;
     padding-left: 27px !important;
     padding-right: 27px !important;
-    background-color: #000000;
+    background-color: #26adcc;
 }
 
 .left-panel {
-    background-color: #000000;
+    background-color: #26adcc;
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 6px !important;
     border-top-left-radius: 0px !important;
@@ -29,7 +29,7 @@ body {
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 6px !important;
     border-top-right-radius: 0px !important;
-    background-color: #000000;
+    background-color: #26adcc;
     padding-top: 0px;
 }
 
@@ -61,7 +61,7 @@ span.add-number, .min-number {
 }
 
 input[type="radio"] {
-    margin-left: 15px;
+    margin-left: 26px;
 }
 
 .question-content-text {
@@ -75,10 +75,14 @@ input[type="radio"] {
     padding-top: 10px;
     padding-bottom: 10px;
     min-height: 360px !important;
+    overflow-x: hidden;
+    padding: 10px;
+    border: #ffffff;
 }
 
 .sort-key-number {
     font-size: 20px;
     text-align: center;
+    border: #ffffff;
 }
 
