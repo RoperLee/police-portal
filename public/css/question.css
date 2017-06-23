@@ -151,6 +151,10 @@ select.correct-select {
     font-size: 18px;
 }
 
+label.subject-label, .question-label {
+    color: #ffac02;
+}
+
 
 
 

@@ -37,7 +37,7 @@
                 <h3>2、题目内容</h3>
                 <div class="row">
                     <div class="form-group">
-                        <label> ① 题号</label>
+                        <label class="question-label"> ① 题号</label>
                         <div class="input-group col-sm-3">
                             <span class="input-group-btn">
                                 <button class="btn btn-default add-number-btn" type="button">
@@ -103,7 +103,7 @@
                     </div>
                     <div class="row correct-line">
                         <div class="form-group">
-                            <label> ④ 正确选项</label>
+                            <label class="question-label"> ④ 正确选项</label>
                             <select class="form-control correct-select">
                                 <option value="A">A</option>
                             </select>
