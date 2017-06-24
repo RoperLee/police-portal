@@ -24,7 +24,7 @@ exports.getDirectoryListBySubjectId = function (req, res, next) {
     }).done(function (result) {
         res.json(result);
     }).error(function (err) {
-        res.json({result});
+        res.json({});
     });
 };
 

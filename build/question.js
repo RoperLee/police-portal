@@ -12771,7 +12771,6 @@ $(document).ready(function () {
 
     function bindEvent() {
 
-
         //题目类型select变化 —— 选择、填空、操作题
         $('.issue-type-select').change(function () {
             let issuetype = $(this).children('option:selected').val();
