@@ -32,6 +32,16 @@
         "online": "http://127.0.0.1:9090/getDirectoryGroupBySubject"
       },
       "timeout": 30000
+    },
+    {
+      "name": "后门录入试题",
+      "id": "easy.add.question",
+      "method": "post",
+      "dataType": "json",
+      "urls": {
+        "online": "http://127.0.0.1:9090/easyAddQuestion"
+      },
+      "timeout": 30000
     }
   ]
 }

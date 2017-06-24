@@ -205,6 +205,19 @@
             let answerStrList = readContentEachLine($('.answer-content-text'), analysisSingLineNumber);
             let answerImgNameList = getStackImageNameList($('#J_answer_img'));
 
+            let postData = {
+                subjectId: subjectId,
+                issuseType: issuseType,
+                sortKeyNumber: sortKeyNumber,
+                isContentImg: isContentImg,
+                contentStrList: contentStrList,
+                isSelectImg: isSelectImg,
+                selectOptionStrList: selectOptionStrList,
+                correctSelectOption: correctSelectOption,
+                isAnswerImg: isAnswerImg,
+                answerStrList: answerStrList,
+                answerImgNameList: answerImgNameList,
+            };
 
             //检测输入是否合法
             {
@@ -250,6 +263,24 @@
 
             //统一上传图片
             $('button.kv-file-upload.btn.btn-xs.btn-default').trigger("click");
+            //数据库的读写
+            $.ajax({
+                url: '/question/easy/add/question',
+                method: 'post',
+                data: {
+                    postData: JSON.stringify(postData)
+                },
+                success: function (result) {
+                    if (result.successful && result.object) {
+                        alert("提交成功");
+                    }
+                    alert("提交失败，请重试");
+                }
+                ,
+                error: function (error) {
+                    alert("提交失败，请重试");
+                }
+            })
 
         });
 

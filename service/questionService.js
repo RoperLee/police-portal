@@ -28,3 +28,16 @@ exports.getDirectoryListBySubjectId = function (req, res, next) {
     });
 };
 
+exports.easyAddQuestion = function (req, res, next) {
+    let dataProxy = new ModelProxy({
+        easyAddQuestion: 'easy.add.question'
+    });
+    dataProxy.easyAddQuestion({
+        postData: req.query.postData
+    }).done(function (result) {
+        res.json(result);
+    }).error(function (err) {
+        res.json({});
+    });
+};
+
