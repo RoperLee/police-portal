@@ -249,7 +249,7 @@
                 if (issuseType === 'CHOICE' &&
                     (!selectOptionStrList.length || $.inArray("", selectOptionStrList) >= 0 || selectOptionStrList.length === 1)
                 ) {
-                    alert('右侧面板中的 ③ 不能含有空的选项');
+                    alert('右侧面板中的 ③ 不能只有一个选项或者含有空选项');
                     return false;
                 }
                 if (isAnswerImg === 'Y' && !$('#J_answer_img').val()) {
@@ -267,18 +267,18 @@
             $('button.kv-file-upload.btn.btn-xs.btn-default').trigger("click");
             //数据库的读写
             $.ajax({
-                url: '/question/easy/add/question',
-                method: 'post',
+                url: '/question/easy/add/questiond',
+                method: 'get',
                 data: {
                     postData: JSON.stringify(postData)
                 },
                 success: function (result) {
                     if (result.successful && result.object) {
                         alert("提交成功");
+                    } else {
+                        alert("提交失败，请重试");
                     }
-                    alert("提交失败，请重试");
-                }
-                ,
+                },
                 error: function (error) {
                     alert("提交失败，请重试");
                 }
