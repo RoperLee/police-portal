@@ -207,10 +207,12 @@
 
             let postData = {
                 subjectId: subjectId,
+                directoryId: directoryId,
                 issuseType: issuseType,
                 sortKeyNumber: sortKeyNumber,
                 isContentImg: isContentImg,
                 contentStrList: contentStrList,
+                contentImgNameList: contentImgNameList,
                 isSelectImg: isSelectImg,
                 selectOptionStrList: selectOptionStrList,
                 correctSelectOption: correctSelectOption,
@@ -245,7 +247,7 @@
                     return false;
                 }
                 if (issuseType === 'CHOICE' &&
-                    (!selectOptionStrList.length || $.inArray("", selectOptionStrList) >= 0)
+                    (!selectOptionStrList.length || $.inArray("", selectOptionStrList) >= 0 || selectOptionStrList.length === 1)
                 ) {
                     alert('右侧面板中的 ③ 不能含有空的选项');
                     return false;

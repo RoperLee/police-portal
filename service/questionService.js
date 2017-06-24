@@ -29,6 +29,7 @@ exports.getDirectoryListBySubjectId = function (req, res, next) {
 };
 
 exports.easyAddQuestion = function (req, res, next) {
+    console.log("##################" + req.query.postData);
     let dataProxy = new ModelProxy({
         easyAddQuestion: 'easy.add.question'
     });
