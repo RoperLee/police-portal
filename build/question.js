@@ -12741,6 +12741,7 @@ let selectOptionTemplate = new XTemplate($('#J_select_option_tmp').html());
 let selectItemData = {
     A: 'B', B: 'C', C: 'D', D: 'E', E: 'F', F: 'G', G: 'H', H: 'I', I: 'J', J: 'K'
 };
+let contentSingLineNumber = 72; //题目单行英文字个数
 
 $(document).ready(function () {
 
@@ -12770,7 +12771,10 @@ $(document).ready(function () {
     }
 
     function bindEvent() {
-
+        //重新打开图片选的时候，清空当前的fileStack
+        $('.btn-file').on('click', function () {
+            $(this).find('input').fileinput('clearStack');
+        });
         //题目类型select变化 —— 选择、填空、操作题
         $('.issue-type-select').change(function () {
             let issuetype = $(this).children('option:selected').val();
@@ -12780,7 +12784,6 @@ $(document).ready(function () {
                 $('.choice-info-panel').addClass('hidden');
             }
         });
-
         //减少选项
         $('.min-select').on('click', function () {
             if ($('.select-option-container').find('.input-group').length > 1) {
@@ -12845,7 +12848,7 @@ $(document).ready(function () {
         });
         //题目是否是图片
         $('input[name="is-img-content"]').change(function () {
-            var $selectedvalue = $('input[name="is-img-content"]:checked').val();
+            let $selectedvalue = $('input[name="is-img-content"]:checked').val();
             if ($selectedvalue == 'N') {
                 $('.question-content-text').removeClass('hidden');
                 $('.up-file-container').addClass('hidden');
@@ -12865,9 +12868,94 @@ $(document).ready(function () {
                 $('.select-image-panel').removeClass('hidden');
             }
         });
+        //统一提交
+        $('.ok-to-submit').on('click', function () {
+            let subjectId = $('.subject-select').children('option:selected').val();
+            let directoryId = $('.directory-select').val();
+            let issuseType = $('.issue-type-select').children('option:selected').val();//CHOICE/BLANK/OPERATION
+            let sortKeyNumber = $('.sort-key-number').val().replace(/\s/g, "");
+            let isContentImg = $('input[name="is-img-content"]:checked').val();
+            let contentStrList = readContentEachLine($('.question-content-text'), contentSingLineNumber);
 
+            return false;
+
+            //检测输入是否合法
+            {
+                if (!directoryId) {
+                    alert('左边面板的 ② 没有填写');
+                    return false;
+                }
+
+                if (!isNaN(sortKeyNumber)) {
+                    if (parseInt(sortKeyNumber) < 1) {
+                        alert('右侧面板的 ① 必须 >1 ');
+                    }
+
+                } else {
+                    alert('右侧面板的 ① 不是数字');
+                    return false;
+                }
+            }
+            //统一上传图片
+            $('button.kv-file-upload.btn.btn-xs.btn-default').trigger("click");
+
+        });
 
     }
+
+    //读取textarea中的内容，组成一个List<String>,eachLineNumber 按照英文字符输入
+    function readContentEachLine($textArear, eachLineNumber) {
+        let originStrList = $textArear.val().split(/[\r\n]/g);
+        let resultList = [];
+        for (let index in originStrList) {
+            let item = originStrList[index];
+            if (getCharNumber(item) <= eachLineNumber) {
+                resultList.push(item);
+            } else {
+                resultList = resultList.concat(splitStrToList(item, eachLineNumber));
+            }
+        }
+        return resultList;
+    }
+
+    //获取一个字符串中字符的格式，中文三个字符，英文一个字符
+    function getCharNumber(str) {
+        var len = 0;
+        for (var i = 0; i < str.length; i++) {
+            var c = str.charCodeAt(i);
+            //单字节加1
+            if ((c >= 0x0001 && c <= 0x007e) || (0xff60 <= c && c <= 0xff9f)) {
+                len++;
+            }
+            else {
+                len += 3;
+            }
+        }
+        return len;
+    }
+
+    //对字符串做切分,splitNumer是一个英文字母算一个字符
+    function splitStrToList(originStr, splitNumber) {
+        if (checkIsChinese(originStr)) {
+            splitNumber = splitNumber / 3;
+        }
+        var strArr = [];
+        for (var i = 0, l = originStr.length; i < l / splitNumber; i++) {
+            var a = originStr.slice(splitNumber * i, splitNumber * (i + 1));
+            strArr.push(a);
+        }
+        return strArr;
+    }
+
+    //判断一个字符串中是否包含中文字符
+    function checkIsChinese(str) {
+        var reg = new RegExp("[\\u4E00-\\u9FFF]+", "g");
+        if (reg.test(str)) {
+            return true
+        }
+        return false;
+    }
+
 });
 
 

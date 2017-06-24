@@ -147,8 +147,8 @@
 <!--章节选择模板-->
 {{%
 <script type="text/x-template" id="J_subject_select_tmp">
-    <label class="subject-label"> ② 选择章节</label>
-    <select class="form-control subject-select">
+    <label class="directory-label"> ② 选择章节</label>
+    <select class="form-control directory-select">
         {{#each(resultList)}}
         <optgroup label="{{type}}">
             {{#each(directoryList)}}
@@ -172,25 +172,9 @@
 <script type="text/javascript" src="/bootstrap-fileinput/js/fileinput.min.js"></script>
 <script>
     $(document).ready(function () {
-
         initFileInput($('#J_question_content_img'));
         initFileInput($('#J_select_img'));
         initFileInput($('#J_answer_img'));
-        bindPortalEvent();
-
-        //绑定点击事件
-        function bindPortalEvent() {
-            //提交
-            $('.ok-to-submit').on('click', function () {
-                $('button.kv-file-upload.btn.btn-xs.btn-default').trigger("click");
-
-            });
-            //重新打开图片选的时候，清空当前的fileStack
-            $('.btn-file').on('click', function () {
-                $(this).find('input').fileinput('clearStack');
-            });
-        }
-
         //初始化fileinput控件
         function initFileInput($ctrlId) {
             $ctrlId.fileinput({
@@ -202,7 +186,6 @@
                 maxFilesNum: 100,//上传最大的文件数量
             });
         }
-
     });
 </script>
 {{/block}}

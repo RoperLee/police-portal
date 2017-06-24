@@ -77,6 +77,7 @@ input[type="radio"] {
     overflow-x: hidden;
     padding: 10px;
     border: #ffffff;
+    word-break: break-all;
 }
 
 .sort-key-number {
@@ -151,7 +152,7 @@ select.correct-select {
     font-size: 18px;
 }
 
-label.subject-label, .question-label {
+label.subject-label, .question-label, .directory-label {
     color: #ffac02;
 }
 
