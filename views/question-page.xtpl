@@ -64,8 +64,8 @@
                 <div class="row">
                     <div class="form-group">
                         <textarea class="question-content-text" cols="52" placeholder="请输入题目文本内容"></textarea>
-                        <div class="up-file-container hidden">
-                            <input id="input-1" name="input1[]" type="file" class="file" multiple
+                        <div class="up-file-container img-parent hidden">
+                            <input id="J_question_content_img" name="question-img" type="file" class="file" multiple
                                    data-show-upload="false" data-show-caption="true">
                         </div>
                     </div>
@@ -97,8 +97,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row select-image-panel hidden">
-                        <input id="input-2" name="input2[]" type="file" class="file" multiple
+                    <div class="row select-image-panel img-parent hidden">
+                        <input id="J_select_img" name="select-img" type="file" class="file" multiple
                                data-show-upload="false" data-show-caption="true">
                     </div>
                     <div class="row correct-line">
@@ -122,8 +122,8 @@
                 <div class="row">
                     <div class="form-group">
                         <textarea class="answer-content-text" cols="56" placeholder="请输入解析文本内容"></textarea>
-                        <div class="up-answer-file-container hidden">
-                            <input id="input-3" name="input3[]" type="file" class="file" multiple
+                        <div class="up-answer-file-container img-parent hidden">
+                            <input id="J_answer_img" name="answer-img" type="file" class="file" multiple
                                    data-show-upload="false" data-show-caption="true">
                         </div>
                     </div>
@@ -173,6 +173,16 @@
 {{#block('scriptLink')}}
 <script src="/question.js"></script>
 <script type="text/javascript" src="/bootstrap-fileinput/js/fileinput.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //重新打开图片选的时候，清空当前的fileStack
+        $('.btn-file').on('click', function () {
+            $(this).find('input').fileinput('clearStack');
+        });
+
+
+    });
+</script>
 {{/block}}
 
 
