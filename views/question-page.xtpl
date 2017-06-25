@@ -127,8 +127,6 @@
                 </div>
 
                 <button type="button" class="btn btn-primary ok-to-submit"> 提交数据</button>
-                <button type="button" class="btn btn-primary empty-cancel"> 清空重填</button>
-
             </div>
         </div>
     </div>
