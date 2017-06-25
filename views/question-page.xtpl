@@ -242,7 +242,7 @@
                     alert('右侧面板的 ② 没有输入题目内容');
                     return false;
                 }
-                if (isContentImg === 'Y' && !$('#J_question_content_img').val()) {
+                if (isContentImg === 'Y' && $('#J_question_content_img').fileinput('getFileStack').length === 0) {
                     alert('右边面板的 ② 没有添加图片');
                     return false;
                 }
@@ -252,7 +252,7 @@
                     alert('右侧面板中的 ③ 不能只有一个选项或者含有空选项');
                     return false;
                 }
-                if (isAnswerImg === 'Y' && !$('#J_answer_img').val()) {
+                if (isAnswerImg === 'Y' && $('#J_answer_img').fileinput('getFileStack').length === 0) {
                     alert('右边面板的 ⑤ 没有添加图片');
                     return false;
                 }
@@ -298,10 +298,10 @@
         //获取图片列表的图片的文件名
         function getStackImageNameList($imgInputId) {
             let stackList = $imgInputId.fileinput('getFileStack');
-            if (!stackList && stackList.length) {
+            if (stackList.length) {
                 let fileNameList = [];
                 for (let index in stackList) {
-                    fileNameList.push(stackList[index].name);
+                    fileNameList.push(stackList[index].size + '-' + stackList[index].name);
                 }
                 return fileNameList;
             } else {
