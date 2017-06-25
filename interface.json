@@ -9,7 +9,7 @@
       "method": "get",
       "dataType": "json",
       "urls": {
-        "online": "http://127.0.0.1:9090/getUserById"
+        "online": "http://115.159.211.47:9090/getUserById"
       },
       "timeout": 30000
     },
@@ -19,7 +19,7 @@
       "method": "get",
       "dataType": "json",
       "urls": {
-        "online": "http://127.0.0.1:9090/getAllSubject"
+        "online": "http://115.159.211.47:9090/getAllSubject"
       },
       "timeout": 30000
     },
@@ -29,7 +29,7 @@
       "method": "get",
       "dataType": "json",
       "urls": {
-        "online": "http://127.0.0.1:9090/getDirectoryGroupBySubject"
+        "online": "http://115.159.211.47:9090/getDirectoryGroupBySubject"
       },
       "timeout": 30000
     },
@@ -39,7 +39,7 @@
       "method": "post",
       "dataType": "json",
       "urls": {
-        "online": "http://127.0.0.1:9090/easyAddQuestion"
+        "online": "http://115.159.211.47:9090/easyAddQuestion"
       },
       "timeout": 30000
     }
