@@ -84,6 +84,18 @@
                                 <span class="input-group-addon"> A </span>
                                 <input type="text" class="form-control select-content" data-value="A">
                             </div>
+                            <div class="input-group input-group-lg select-item">
+                                <span class="input-group-addon"> B </span>
+                                <input type="text" class="form-control select-content" data-value="B">
+                            </div>
+                            <div class="input-group input-group-lg select-item">
+                                <span class="input-group-addon"> C </span>
+                                <input type="text" class="form-control select-content" data-value="C">
+                            </div>
+                            <div class="input-group input-group-lg select-item">
+                                <span class="input-group-addon"> D </span>
+                                <input type="text" class="form-control select-content" data-value="D">
+                            </div>
                         </div>
                         <div class="">
                             <div class="btn-group" role="group">
@@ -104,6 +116,9 @@
                             <label class="question-label"> ④ 正确选项</label>
                             <select class="form-control correct-select">
                                 <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
                             </select>
                         </div>
                     </div>
