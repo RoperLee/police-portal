@@ -144,7 +144,6 @@
                 <button type="button" class="btn btn-primary ok-to-submit"> 提交数据</button>
             </div>
         </div>
-        <input type="hidden" id="J_hidden＿input" value="PengLee">
     </div>
 </div>
 
@@ -197,35 +196,25 @@
                 uploadUrl: 'http://115.159.211.47:9090/question/ajax/img/uploade', //上传的地址
                 allowedFileExtensions: ['jpg', 'png', 'gif'],//接收的文件后缀
                 showUpload: false, //是否显示上传按钮
-                browseClass: "btn btn-primary", //按钮样式
-                uploadExtraData: function (previewId, index) {   //额外参数的关键点
-                    var obj = {};
-                    obj.extra = getHideInput();
-                    return obj;
-                }
+                browseClass: "btn btn-primary" //按钮样式
             });
-        }
-
-        function getHideInput() {
-            return $('#J_hidden＿input').val();
         }
 
         //执行提交
         $('.ok-to-submit').on('click', function () {
-            let currentDate = new Date().getTime();//用于生成唯一时间码
             let subjectId = $('.subject-select').children('option:selected').val();
             let directoryId = $('.directory-select').val();
             let issuseType = $('.issue-type-select').children('option:selected').val();//CHOICE/BLANK/OPERATION
             let sortKeyNumber = $('.sort-key-number').val().replace(/\s/g, "");
             let isContentImg = $('input[name="is-img-content"]:checked').val();
             let contentStrList = readContentEachLine($('.question-content-text'), contentSingLineNumber);
-            let contentImgNameList = getStackImageNameList($('#J_question_content_img'), currentDate);
+            let contentImgNameList = getStackImageNameList($('#J_question_content_img'));
             let isSelectImg = false;
             let selectOptionStrList = getSelectStrList();
             let correctSelectOption = $('.correct-select').children('option:selected').val();
             let isAnswerImg = $('input[name="is-img-answer"]:checked').val();
             let answerStrList = readContentEachLine($('.answer-content-text'), analysisSingLineNumber);
-            let answerImgNameList = getStackImageNameList($('#J_answer_img'), currentDate);
+            let answerImgNameList = getStackImageNameList($('#J_answer_img'));
 
             let postData = {
                 subjectId: subjectId,
@@ -284,7 +273,7 @@
 
                 }
             }
-            $('#J_hidden＿input').val(currentDate);
+
             //统一上传图片
             $('button.kv-file-upload.btn.btn-xs.btn-default').trigger("click");
             //数据库的读写
@@ -318,12 +307,12 @@
         }
 
         //获取图片列表的图片的文件名
-        function getStackImageNameList($imgInputId, currentDate) {
+        function getStackImageNameList($imgInputId) {
             let stackList = $imgInputId.fileinput('getFileStack');
             if (stackList.length) {
                 let fileNameList = [];
                 for (let index in stackList) {
-                    fileNameList.push(currentDate + '-' + stackList[index].size + '-' + stackList[index].name.replace(/-/g, '_'));
+                    fileNameList.push(stackList[index].size + '-' + stackList[index].name.replace(/-/g, '_'));
                 }
                 return fileNameList;
             } else {
