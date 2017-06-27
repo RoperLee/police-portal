@@ -16,7 +16,3 @@ exports.serviceMethod = function (req, res, next) {
         res.render('index', {title: err});
     });
 };
-
-exports.importExcel = function (req, res, next) {
-    res.render('index', {});
-};
