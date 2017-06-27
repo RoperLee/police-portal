@@ -41,3 +41,10 @@ exports.easyAddQuestion = function (req, res, next) {
     });
 };
 
+exports.testPost = function (req, res, next) {
+    let body = req.query.postData;
+    return true;
+};
+
+
+
