@@ -3,6 +3,6 @@
  */
 var ModelProxy = require('../lib/modelproxy');
 
-exports.serviceMethod = function (req, res, next) {
-        res.render('index', { });
+exports.operateExcel = function (req, res, next) {
+    res.render('excel', {});
 };

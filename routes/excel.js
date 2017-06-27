@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var firstService = require('../service/firstService');
+var excelService = require('../service/excelService');
 
-router.get('/', firstService.serviceMethod);
+router.get('/operate/excel', excelService.operateExcel);
 
 module.exports = router;

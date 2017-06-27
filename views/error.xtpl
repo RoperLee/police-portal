@@ -1,6 +1,0 @@
-{{extend('./layout')}}
-{{#block('content')}}
-<div class="body-implement">
-    <h1>出错了</h1>
-</div>
-{{/block}}
