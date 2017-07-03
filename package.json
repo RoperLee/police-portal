@@ -19,6 +19,7 @@
     "mockjs": "0.1.1",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2",
+    "textract": "^2.1.2",
     "xtemplate": "^4.7.2",
     "xtpl": "^3.3.0"
   },

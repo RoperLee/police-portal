@@ -1,0 +1,12 @@
+{{extend('./layout')}}
+{{#block('content')}}
+<div class="word-content">
+    {{text}}
+</div>
+{{/block}}
+
+{{#block('styleLink')}}
+{{/block}}
+
+{{#block('scriptLink')}}
+{{/block}}
