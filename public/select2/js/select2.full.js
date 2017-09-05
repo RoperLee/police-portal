@@ -4465,7 +4465,7 @@ S2.define('select2/i18n/en',[],function () {
   // English
   return {
     errorLoading: function () {
-      return 'The results could not be loaded.';
+      return '当前网络不稳定，请稍后重新搜索';
     },
     inputTooLong: function (args) {
       var overChars = args.input.length - args.maximum;
@@ -4501,7 +4501,7 @@ S2.define('select2/i18n/en',[],function () {
       return 'No results found';
     },
     searching: function () {
-      return 'Searching…';
+      return '搜索中…';
     }
   };
 });
